@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title "All the best pins on Earth"%}
+
+{% block body %}
+<h1>{{ pins|length }} pins</h1>
+  {% for pin in pins%}
+  <div class="row ">
+ <div class="col-md-6 mx-auto mt-3 ">
+   <article>
+    <h2><a href="{{path("app_pins_show",{id:pin.id})}}">{{pin.title}}<a/></h2>
+    <p>{{pin.description|u.truncate(15,'...',false)}}</p>
+    <p>submitted {{pin.createdAt|ago}}</p>
+   </article> 
+   </div>
+   </div>
+   {%endfor%}
+
+{% endblock %}

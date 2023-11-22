@@ -1,0 +1,33 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+nav{
+    font-size: 30px;
+    
+  }
+  label{
+    
+    width:150px;
+    
+  }
+  input{
+    width:400px;
+    
+  }
+  
+   
+   .alert{
+      padding:10px;
+      color:white;
+      text-align:center;
+    }
+  .alert-succes{
+    background-color:green;
+     }
+  .alert-Notice{  
+    background-color:red;
+    }
+  .alert-info{
+    background-color:blue;
+  }
+ 

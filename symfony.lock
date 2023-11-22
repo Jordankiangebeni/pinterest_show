@@ -26,6 +26,9 @@
             "./migrations/.gitignore"
         ]
     },
+    "knplabs/knp-time-bundle": {
+        "version": "v2.2.0"
+    },
     "phpunit/phpunit": {
         "version": "9.6",
         "recipe": {
@@ -243,7 +246,22 @@
             "./config/routes/web_profiler.yaml"
         ]
     },
+    "theofidry/psysh-bundle": {
+        "version": "4.5.0"
+    },
     "twig/extra-bundle": {
         "version": "v3.7.1"
+    },
+    "vich/uploader-bundle": {
+        "version": "2.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "1.13",
+            "ref": "1b3064c2f6b255c2bc2f56461aaeb76b11e07e36"
+        },
+        "files": [
+            "./config/packages/vich_uploader.yaml"
+        ]
     }
 }

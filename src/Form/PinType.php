@@ -13,14 +13,13 @@ class PinType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-        ->add('genericFile', VichFileType::class, [
+        ->add('imageFile', VichFileType::class, [
             'required' => false,
             'allow_delete' => true,
             'delete_label' => '...',
             'download_uri' => '...',
             'download_label' => '...',
-            'asset_helper' => true,
-            'mapped' => false,
+            'asset_helper' => true
           ])
             ->add('title')
             ->add('description')

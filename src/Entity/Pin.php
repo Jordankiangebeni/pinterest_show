@@ -167,17 +167,5 @@ class Pin
 
          return $this;
      }
-         
- 
- 
-         public function setGenericFile(?string $genericFile): self
-         {
-             $this->genericFile = $genericFile;
-     
-             return $this;
-         }
-          
-
-    
 
 }

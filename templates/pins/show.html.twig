@@ -1,15 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}All the best pins on Earth {% endblock%}
+{% block title %} All the best pins on Earth {% endblock %}
 {% block body %}
-   <article>
+   <article class=" txt-center">
     <h1>{{pin.title}}</h1>
-    <p>{{pin.description}}</p>
+    <p class="h4">{{pin.description}}</p>
    </article>
-<a href="{{ path('app_pins_edit', {id : pin.id}) }}"> Edit</a> |
-<a href="{{ path('app_pins_delete', {id : pin.id}) }}" onclick="event.preventDefault(); document.getElementById("js-pin-delete-form").submit();">delete</a>|
+     <article class="img_center">
+       <img width="500px" src="{{asset("uploads/pins/"~pin.imageName)}}" alt="Pin" class="img-avec-ombre " >
+            <div class="date">
+         <strong>submitted {{pin.createdAt|ago}} by {{pin.user.firstName}}  {{pin.user.lastName}}</strong>
+         </div>
+      </article>
+
+<div class="move">
+<a href="{{ path('app_pins_edit', {id : pin.id}) }}" <strong class=" btn btn-light">Edit</strong></a> |
+<a href="{{ path('app_pins_delete', {id : pin.id}) }}" onclick="event.preventDefault(); document.getElementById("js-pin-delete-form").submit();"><strong class=" btn btn-light">Delete</strong></a>|
+
      <a href="{{path("app_home")}}"></a>
   <form id="js-pin-delete-form" action="{{ path('app_pins_delete', {id : pin.id}) }}" method="post" style="display:none;">
-   <input type="hidden" name="_method" value="DELETE"> 
+   <input type="submit" value="DELETE"> 
   </form>
-{% endblock %}   
+  </div>
+
+     
+{% endblock %} 
+
+
+

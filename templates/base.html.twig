@@ -17,7 +17,7 @@
         
     </head>
     <body>
-
+                                                              
         {% for label, messages in app.flashes %}
                     {% for message in messages %}
                        <div class="alert alert-{{ label }}">
@@ -33,22 +33,31 @@
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="container ml-5 mb-3">
+      <div class="container-flux">
             <div class="collapse navbar-collapse" id="navbarsExample03">
         <ul class="navbar-nav ml-5">
-          <li class="nav-item">
-            <a class="nav-link" href="{{path("app_pins_create")}}">New Pin</a>
-          </li>
+        {% if app.user %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{path("app_pins_create")}}">New Pin</a>
+            </li>
           
-          <li class="nav-item">
-            <a class="nav-link" href="#">Account</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"> Logout</a>
-          </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Account</a>
+            </li>
+            <li class="nav-item">
+               <a class="nav-link" href="{{path('app_logout')}}"> Logout</a>
+            </li>
+        {% else  %}
+
+             <li class="nav-item">
+                <a class="nav-link" href="{{path('app_register')}}">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{path('app_login')}}">Login</a>
+
+              </li>
+            {% endif %}
         
-          
-         
         </ul>
 
      

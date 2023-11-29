@@ -29,5 +29,74 @@ nav{
     }
   .alert-info{
     background-color:blue;
+  } 
+
+  .navbar-nav{
+    margin-left: 50px;
   }
  
+  .container-flux{
+    margin-left: 50px;
+  }
+  .img-avec-ombre:hover {
+    box-shadow: 10px 10px 5px gray;
+    transform: scale(1.075);
+    transition:0.6 ease-out;
+
+}
+
+.order{
+  
+    display: inline-block;
+    margin-right: 20px; 
+    width: 30%; 
+    margin-bottom: 5px;
+    
+}
+
+a:hover {
+  color: gray;
+  
+
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+
+h1{
+  text-align: center;
+  text-decoration: underline;
+  margin-bottom: 40px;
+}
+h4{
+  text-align: center;
+}
+.img_center{
+  
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.txt-center{
+  text-align: center;
+}
+
+.move{
+  margin-top: 333px;
+  margin-left: 400px;
+}
+.date{
+  margin-top: 0px;
+}
+
+
+
+
+
+
+
+
+
+

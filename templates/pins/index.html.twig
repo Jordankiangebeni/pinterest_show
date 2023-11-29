@@ -3,17 +3,32 @@
 {% block title "All the best pins on Earth"%}
 
 {% block body %}
-<h1>{{ pins|length }} pins</h1>
-  {% for pin in pins%}
-  <div class="row ">
- <div class="col-md-6 mx-auto mt-3 ">
-   <article>
-    <h2><a href="{{path("app_pins_show",{id:pin.id})}}">{{pin.title}}<a/></h2>
-    <p>{{pin.description|u.truncate(15,'...',false)}}</p>
-    <p>submitted {{pin.createdAt|ago}}</p>
-   </article> 
-   </div>
-   </div>
-   {%endfor%}
+{% if  pins|length > 0  %}
+<h1>{{ pins|length }} pins </h1>
+  {% for pin in pins %}
+  
+    <div class="order">
+        <article>
+           <h3><a href="{{path("app_pins_show",{id:pin.id})}}">{{pin.title}}<a/></h3>
+           <p class="h4">{{pin.description|u.truncate(15,'...',false)}}</p>
+           <p>submitted {{pin.createdAt|ago}} by {{pin.user.firstName}}  {{pin.user.lastName}}</p>
+        </article> 
+      
+       <article>
+         <img width="350px"  src="{{asset("uploads/pins/"~pin.imageName)}}" alt="Pin" class="img-avec-ombre">
+       </article>
+    
+     </div>
+     {% endfor %}
+   
+        
+
+
+        {% else %}
+     <p class="h2 text-center mt-5">No pins yet!<a href="{{path("app_pins_create")}}" >Be the first!</a></p>
+   {% endif %}
+
+  
+
 
 {% endblock %}

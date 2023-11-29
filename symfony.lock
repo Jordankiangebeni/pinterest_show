@@ -246,6 +246,9 @@
             "./config/routes/web_profiler.yaml"
         ]
     },
+    "symfonycasts/verify-email-bundle": {
+        "version": "v1.14.0"
+    },
     "theofidry/psysh-bundle": {
         "version": "4.5.0"
     },

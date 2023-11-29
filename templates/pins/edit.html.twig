@@ -1,13 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}"Edit pin" ~ pin.id {% endblock %}
+{% block title %}" Edit pin " ~ pin.id {% endblock %}
 
 {% block body %}
-<div class="row ">
- <div class="col-md-6 mx-auto mt-3 ">
-<h1> Edit pin </h1>
-  {{include("pins/_form.html.twig",{submitButtonText:"Update pin"})}}
+ <div class="row ">
+   <div class="col-md-6 mx-auto mt-3 ">
+      <h1> Edit pin </h1>
+  
+   
+      {{include("pins/_form.html.twig",{submitButtonText:"Update pin"})}}
+   </div>
   </div>
-  </div>
+
 
 {% endblock %}

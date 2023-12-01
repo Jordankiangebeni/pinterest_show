@@ -91,6 +91,13 @@ h4{
   margin-top: 0px;
 }
 
+.form-field {
+  margin-bottom: 20px;
+}
+.custom-file {
+  width: 100%;
+  max-width: 300px;
+}
 
 
 
